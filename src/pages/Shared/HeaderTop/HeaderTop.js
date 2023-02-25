@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import {} from './HeaderTop.css';
 import { BsFillTelephoneFill,BsEnvelopeFill,BsCartCheckFill,BsGlobe,BsFillPersonFill } from "react-icons/bs";
+import { Link } from 'react-router-dom';
 
 
 const HeaderTop = () => {
+    const accountMenuRef = useRef();
+    const [accountIsOpen,setAccountIsOpen] = useState(false);
+    
+    window.addEventListener('click', e => {
+        if(e.target !== accountMenuRef.current){
+            setAccountIsOpen(false)
+        }
+    })
+
+    const languageMenuRef = useRef();
+    const [language,setLanguage] = useState('eng');
+    console.log(language);
+    const [languageMenuOpen,setLanguageMenuOpen] = useState(false);
+    window.addEventListener('click', e => {
+        if(e.target !== languageMenuRef.current){
+            setLanguageMenuOpen(false)
+        }
+    });
+
     return (
         <div className='py-2 bg-black text-gray text-sm'>
             <div className='container mx-auto'>
@@ -22,8 +42,29 @@ const HeaderTop = () => {
                                 <h1>Hello</h1>
                             </div>
                         </div>
-                        <div className='flex items-center mr-5'><BsGlobe className='mr-1'/> Language</div>
-                        <div className='flex items-center '><BsFillPersonFill className='mr-1'/> Account</div>
+                        {/* Language Menu Start */}
+                        <div className='flex items-center mr-5 relative cursor-pointer' ref={languageMenuRef} onClick={() => setLanguageMenuOpen(!languageMenuOpen)}><BsGlobe className='mr-1'/> Language
+                            {
+                                languageMenuOpen && <div  className='absolute top-6 left-0 z-40'>
+                                    <div className='bg-red flex flex-col'>
+                                        <p className='py-2 pl-8 pr-20 hover:bg-gray hover:text-white' onClick={()=> setLanguage('eng')}>Bangla</p>
+                                        <p className='py-2 pl-8 pr-20 hover:bg-gray hover:text-white' onClick={()=> setLanguage('bd')}>English</p>
+                                        <p className='py-2 pl-8 pr-20 hover:bg-gray hover:text-white' onClick={()=> setLanguage('arabic')}>Arabic</p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        {/* Language Menu End */}
+                        <div className='flex items-center relative cursor-pointer' ref={accountMenuRef} onClick={() => setAccountIsOpen(!accountIsOpen)}><BsFillPersonFill className='mr-1'/> Account
+                            {accountIsOpen && <div className='absolute top-6 right-0 z-40 '>
+                                <div className='bg-red flex flex-col'>
+                                    <Link className='text-base text-black py-2 pl-8 pr-20 hover:bg-gray hover:text-white' to=''>My Profile</Link>
+                                    <Link className='text-base text-black py-2 pl-8 pr-20 hover:bg-gray hover:text-white' to=''>BookMark</Link>
+                                    <Link className='text-base text-black py-2 pl-8 pr-20 hover:bg-gray hover:text-white' to=''>My Cart</Link>
+                                    <Link className='text-base text-black py-2 pl-8 pr-20 hover:bg-gray hover:text-white border-t' to=''>Logout</Link>
+                                </div>
+                            </div>}
+                        </div>
                     </div>
                 {/* Headertop right area end */}
                </div>
