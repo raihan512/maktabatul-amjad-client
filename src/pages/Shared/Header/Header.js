@@ -15,11 +15,11 @@ const Header = () => {
                 {/* header logo end */}
                 {/* header menu start */}
                 <div className='flex'>
-                    <Link to="" className='font-semibold text-base text-white px-2 hover:text-gray'>Home</Link>
-                    <Link to="" className='font-semibold text-base text-white px-2 hover:text-gray'>Books</Link>
-                    <Link to="" className='font-semibold text-base text-white px-2 hover:text-gray'>Authors</Link>
-                    <Link to="" className='font-semibold text-base text-white px-2 hover:text-gray'>About</Link>
-                    <Link to="" className='font-semibold text-base text-white px-2 hover:text-gray'>Contact</Link>
+                    <Link to="" className='text-base text-white px-2 hover:text-gray'>Home</Link>
+                    <Link to="" className='text-base text-white px-2 hover:text-gray'>Books</Link>
+                    <Link to="" className='text-base text-white px-2 hover:text-gray'>Authors</Link>
+                    <Link to="" className='text-base text-white px-2 hover:text-gray'>About</Link>
+                    <Link to="" className='text-base text-white px-2 hover:text-gray'>Contact</Link>
                 </div>
                 {/* header menu end */}
                 {/* header searchbar start */}
