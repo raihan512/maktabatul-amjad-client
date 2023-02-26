@@ -9,21 +9,23 @@ const Header = () => {
             <div className='container mx-auto'>
                 <div className='flex justify-between items-center'>
                     {/* header logo start */}
-                <div>
+                <div className='w-3/12 lg:w-2/12'>
                     <img src='https://i.ibb.co/0sPhz6P/logo.png' className='w-6/12' alt=''/>
                 </div>
                 {/* header logo end */}
                 {/* header menu start */}
-                <div className='flex'>
-                    <Link to="" className='text-base text-white px-2 hover:text-gray'>Home</Link>
+                <div className='hidden md:block w-6/12 lg:w-7/12'>
+                   <div className='flex lg:justify-center'>
+                   <Link to="" className='text-base text-white px-2 hover:text-gray'>Home</Link>
                     <Link to="" className='text-base text-white px-2 hover:text-gray'>Books</Link>
                     <Link to="" className='text-base text-white px-2 hover:text-gray'>Authors</Link>
                     <Link to="" className='text-base text-white px-2 hover:text-gray'>About</Link>
                     <Link to="" className='text-base text-white px-2 hover:text-gray'>Contact</Link>
+                   </div>
                 </div>
                 {/* header menu end */}
                 {/* header searchbar start */}
-                <div className='relative w-[240px] h-8 bg-white'>
+                <div className='relative w-3/12 lg:w-2/12 h-8 bg-white'>
                     <input className='absolute top-0 left-0 h-full w-full pl-5 focus:outline-none' placeholder='Search...'/>
                     <button className='absolute top-2 right-3 cursor hover:text-red'><FaSearch/></button>
                 </div>
