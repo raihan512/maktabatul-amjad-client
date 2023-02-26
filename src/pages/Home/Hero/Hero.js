@@ -41,9 +41,9 @@ const Hero = () => {
                                 {/* Slider item */}
                             </Slider>
             {/* Slider buttons */}
-            <div className='absolute top-1/3 left-0 w-full px-1 lg:px-2 flex justify-between'>
-                <button onClick={() => sliderBtns.current.slickPrev()} className='py-4 lg:py-8 px-1 lg:px-3 bg-gray'><IoIosArrowBack className='text-white text-xl md:text-2xl xl:text-4xl'/></button>
-                <button onClick={() => sliderBtns.current.slickNext()} className='py-4 lg:py-8 px-1 lg:px-3 bg-gray'><IoIosArrowForward className='text-white text-xl md:text-2xl xl:text-4xl'/></button>
+            <div className='absolute top-3/5 left-0 w-full px-1 lg:px-2 flex justify-between'>
+                <button onClick={() => sliderBtns.current.slickPrev()} className='py-4 px-1 bg-gray'><IoIosArrowBack className='text-white text-lg md:text-xl'/></button>
+                <button onClick={() => sliderBtns.current.slickNext()} className='py-4 px-1 bg-gray'><IoIosArrowForward className='text-white text-lg md:text-xl'/></button>
                 </div>
                     </div>
                     {/* Hero  left area end */}
