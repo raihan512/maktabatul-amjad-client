@@ -5,12 +5,12 @@ import { FaSearch } from "react-icons/fa";
 
 const Header = () => {
     return (
-        <header className='bg-red py-4'>
+        <header className='bg-primary py-4'>
             <div className='container mx-auto'>
                 <div className='flex justify-between items-center'>
                     {/* header logo start */}
                 <div>
-                    <h3 className='font-bold text-lg'>Maktabatul Amjad</h3>
+                    <img src='https://i.ibb.co/0sPhz6P/logo.png' className='w-6/12' alt=''/>
                 </div>
                 {/* header logo end */}
                 {/* header menu start */}
