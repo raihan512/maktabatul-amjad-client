@@ -3,6 +3,7 @@ import { GrStar } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
 
 const HomeLeft = () => {
+
     return (
         // sidenav
         <div className='w-3/12 border-r border-gray'>

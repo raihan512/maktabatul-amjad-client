@@ -9,7 +9,7 @@ const NewProducts = () => {
             <h3 className='text-xl text-black font-semibold'>New Products</h3>
             <button className='text-red underline'><Link to="/">See More</Link></button>
             </div>
-            <div className='flex flex-wrap justify-between'>
+            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5'>
             <BookCard src="https://www.noor-book.com/publice/covers_cache_webp/6/2/f/4/4d3a1fc7952f424f5d6d781191322c98.png.webp"></BookCard>
                     <BookCard src="https://www.noor-book.com/publice/covers_cache_webp/13/8/5/6/33f9fa8aee85661a585599fe2fb88ed5.png.webp"></BookCard>
                     <BookCard src="https://www.noor-book.com/publice/covers_cache_webp/1/b/2/e/05254d2e8db2eebdd9259565e3faa509.png.webp"></BookCard>
